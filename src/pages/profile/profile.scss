@@ -1,0 +1,44 @@
+page-profile {
+    .border_circle{
+        border-radius: 50%;
+        height: 60px;
+        width: 60px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .icon_height{
+        margin-top: 20%;
+    }
+
+    .txt_height1{
+        margin-top:5px;
+    }
+
+    .vertical_text{
+        height: 100px;
+        transform: rotate(-90deg);
+        margin: auto;
+    }
+    .horigental_text{
+        height: 100px;
+        transform: rotate(-90deg);
+        margin: auto;
+        margin-left: 80%;
+        margin-top: 30%;
+    }
+
+    .button_style{
+        width: 20%;
+        font-size: 1.2rem;
+        font-family: Thonburi;
+        border: 1px solid #8f8f91;
+        border-radius: 20px;
+        margin: 0%;
+        padding: 0px;
+        height: 2rem;
+        background-color: white;
+        color: #4c4c4e;
+    }
+
+}

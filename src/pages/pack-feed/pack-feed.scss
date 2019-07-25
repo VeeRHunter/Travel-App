@@ -1,0 +1,37 @@
+page-pack-feed {
+    .image_style{
+        position: relative;
+        width:100%;
+    }
+
+    .homepage_part{
+        margin-top: 20px;
+    }
+
+    .bottom_icon{
+        // width:100%; 
+        margin-left:auto;
+        // margin-right:auto;
+        transform: scale(2,2);
+    }
+
+    .book_button_style{
+        width: 60%;
+        margin-left: 20%;
+        background-color: white;
+        border: 1px solid #8f8f91;
+        border-radius: 25px;
+        color: #8f8f91;
+        text-transform: uppercase;
+        font-size:1.8rem;
+        margin-top: 10%;
+        font-family: PingFang FC;
+    }
+
+    .row_border{
+        border-bottom: 1px solid #8f8f91;
+        width: 100%;
+        margin-top: 5%;
+    }
+
+}

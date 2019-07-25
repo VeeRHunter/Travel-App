@@ -1,0 +1,42 @@
+page-gallery {
+    .main_image{
+        position: relative;
+        // height: 70%;
+        width: 110%;
+        margin-left: -5%;
+        margin-top: -5%;
+
+    }
+
+    .image_style{
+        width: 100%;
+        height: 100%;
+    }
+
+    .img_style{
+        border-radius: 5px;
+        width: 100%;
+        height: 60px;
+        margin-left: 5%;
+    }
+
+    .image_index{
+        position: absolute;
+        top: 10%;
+        margin-left: 70%;
+        color: white;
+    }
+
+    .direct_icon_left{
+        transform:scale(1.5,1.5);
+        color: white;
+        margin-left: 5%;    
+    }
+
+    .direct_icon_right{
+        transform:scale(1.5,1.5);
+        color: white;
+        margin-left: auto;
+        margin-right: 5%;
+    }
+}

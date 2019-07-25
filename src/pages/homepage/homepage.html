@@ -1,0 +1,387 @@
+<!--
+  Generated template for the HomepagePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+    <ion-row style="margin-top: 10px;background-color: white;">
+        <ion-col col-3>
+            <!-- <ion-icon name="md-menu" style="margin-left:10px; transform:scale(2, 2); margin-top: 5px;" (click)="click_menu_button();"></ion-icon> -->
+            <img src="assets/img/menu.png" class="menu_style" (click)="click_menu_button()"/>
+        </ion-col>
+        <ion-col col-9>
+            <span class="fontsize_mid1 header_style" style="margin-left:25%;">FEED</span>
+        </ion-col>
+    </ion-row>
+
+</ion-header>
+
+<ion-content padding>
+
+    <ion-row class="homepage_part">
+        <ion-row>
+            <span class="fontsize_big" style="width:45%; margin-top:5%;">
+                Recommended Stay
+            </span>
+            <span style="border-bottom: 1px solid #dbdbdb; width:50%;"></span>
+        </ion-row>
+
+
+        <ion-row class="main_image">
+            <img src="{{img_src}}" class="image_style" (click)="goto_hotel(img_id)" />
+            <!-- <span class="fontsize_mid1 image_index">image &nbsp; {{img_id}} of 8</span> -->
+            <ion-row style="position:absolute; top:50%; width:100%;">
+                <ion-row style="width:50%; float:left;">
+                    <ion-icon name="ios-arrow-dropleft-circle" class="direct_icon_left" (click)="click_left()"></ion-icon>
+                </ion-row>
+
+                <ion-row style="width:50%; float:right;">
+                    <ion-icon name="ios-arrow-dropright-circle" class="direct_icon_right" (click)="click_right()"></ion-icon>
+                </ion-row>
+            </ion-row>
+        </ion-row>
+        
+        <ion-row>
+
+            <ion-row class="row_height">
+                    <span class="fontsize_small">THB {{hotel_priceone}}</span>
+            </ion-row>
+    
+    
+            <ion-row class="row_height">
+                    <span class="fontsize_mid">{{hotel_nameone}}</span>
+            </ion-row>
+
+            <!-- <ion-row class="row_height">
+                <span class="fontsize_mid">{{act_show.act_by}}</span>
+            </ion-row> -->
+    
+            <ion-row class="row_height">
+                <span class="fontsize_mid">{{hotel_addressone}}</span>
+            </ion-row>
+
+            <ion-row style="margin-bottom:20px;" class="row_height1">
+                <span class="fontsize_small" style="width:10%; color:#aaaaaa">+ 194</span>
+                <ion-icon name="md-heart" style="width:50%; text-align:left; float:left; color:#aaaaaa;"></ion-icon>
+            </ion-row>
+        </ion-row>
+    </ion-row>
+
+    <ion-row class="homepage_part">
+        <ion-row>
+            <span class="fontsize_big" style="width:60%; margin-top: -5%;">
+                Recommended Experience
+            </span>
+            <span style="border-bottom: 1px solid #dbdbdb; width:30%;"></span>
+        </ion-row>
+
+
+        <ion-row class="main_image">
+            <img src="{{act_img_src}}" class="image_style" (click)="goto_exp_infor(act_img_id)" />
+            <!-- <span class="fontsize_mid1 image_index">image &nbsp; {{img_id}} of 8</span> -->
+            <ion-row style="position:absolute; top:50%; width:100%;">
+                <ion-row style="width:50%; float:left;">
+                    <ion-icon name="ios-arrow-dropleft-circle" class="direct_icon_left" (click)="click_act_left()"></ion-icon>
+                </ion-row>
+
+                <ion-row style="width:50%; float:right;">
+                    <ion-icon name="ios-arrow-dropright-circle" class="direct_icon_right" (click)="click_act_right()"></ion-icon>
+                </ion-row>
+            </ion-row>
+        </ion-row>
+
+        <ion-row>
+
+            <ion-row class="row_height">
+                    <span class="fontsize_small">THB {{act_show.act_price}}</span>
+            </ion-row>
+    
+    
+            <ion-row class="row_height">
+                    <span class="fontsize_mid">{{act_show.act_name}}</span>
+            </ion-row>
+
+            <ion-row class="row_height">
+                <span class="fontsize_mid">{{act_show.act_by}}</span>
+            </ion-row>
+    
+            <ion-row class="row_height">
+                <span class="fontsize_mid">{{act_show.act_loc}}</span>
+            </ion-row>
+
+            <ion-row style="margin-bottom:20px;" class="row_height1">
+                <span class="fontsize_small" style="width:10%; color:#aaaaaa">+ 194</span>
+                <ion-icon name="md-heart" style="width:50%; text-align:left; float:left; color:#aaaaaa;"></ion-icon>
+            </ion-row>
+        </ion-row>
+
+    </ion-row>
+
+
+    <ion-row class="homepage_part">
+        <ion-row>
+            <span class="fontsize_big" style="width:60%; margin-top:5%;">
+                Recommended Package
+            </span>
+            <span style="border-bottom: 1px solid #dbdbdb; width:35%;"></span>
+        </ion-row>
+
+        <ion-row style="margin-top: 20px; color:#c5c5c5;">
+            <span class="fontsize_small" style="text-align:right;">1 min ago</span>
+        </ion-row>
+      
+        <ion-row class="image_style" >
+            <ion-row style="height: 200px; position:relative;" (click) = "goto_pack_infor()">
+                <ion-row style="position: relative;">
+                    <img src="assets/img/2.png" style="width:100%; position:absolute;"/>
+                    <ion-row  style="height:25px; margin-top: 15px; position:absolute;">
+                            <span style="width:10%; height:100%; float:right; margin-left: auto;">
+                                <img src="assets/img/fix.png" class="fix_icon">
+                            </span>
+                            <span style="width:10%; height:100%; float:right;">
+                                <img src="assets/img/undo.png" class="undo_icon">
+                            </span>
+                    </ion-row>
+                </ion-row>
+            </ion-row>
+
+            <ion-row>
+                <ion-col col-4>
+                    <img src="assets/img/hei1.png" style="width:100%; height:100%" (click) = "goto_pack_infor()"/>
+                </ion-col>
+
+                <ion-col col-4>
+                    <img src="assets/img/hei2.png" style="width:100%; height:100%" (click) = "goto_pack_infor()"/>
+                </ion-col>
+
+                <ion-col col-4>
+                    <img src="assets/img/hei3.png" style="width:100%; height:100%" (click) = "goto_pack_infor()"/>
+                </ion-col>
+            </ion-row>
+
+            <ion-row class="row_height">
+                <ion-col col-8>
+                    <span class="fontsize_mid" style="margin-left: -5px;">Chiang Mai Package Tours...</span>
+                </ion-col>
+
+                <ion-col col-4>
+                    <span class="fontsize_small">THB 2,450.00</span>
+                </ion-col>
+            </ion-row>
+
+
+            <ion-row class="row_height">
+                <span class="fontsize_mid">Stay : Chiang Mai Private Villa / Thailand</span>
+            </ion-row>
+
+
+            <ion-row class="row_height">
+                <span class="fontsize_mid">3 days / 2 night</span>
+            </ion-row>
+
+            <ion-row style="margin-bottom:20px;" class="row_height1">
+                <span class="fontsize_small" style="width:10%; color:#aaaaaa">+ 194</span>
+                <ion-icon name="md-heart" style="width:80%; text-align:left; float:left; color:#aaaaaa;"></ion-icon>
+            </ion-row>
+        </ion-row>
+
+        <ion-row style="width:100%; border-bottom:1px solid #c1bdc5;"></ion-row>
+    </ion-row>
+
+
+    <ion-row class="homepage_part">
+
+        <ion-row style="margin-top:20px; color:#c5c5c5;">
+            <span class="fontsize_small" style="text-align:right;">3 hr ago</span>
+        </ion-row>
+      
+        <ion-row class="image_style" >
+            <video width="100%" height="210" poster="assets/1.png" class="videoset" controls (click) = "goto_video()" >
+              <!-- <source src="assets/video/introduction.mp4" type="video/mp4"> -->
+            </video>  
+
+            <ion-row class="row_height">
+                <span class="fontsize_mid" style="line-height: 150%;">Stay of distinction a "place of peace" nestled<br/>
+                amongst coconut palms which leads to a<br/> private crescent beach touch...</span>
+            </ion-row>
+
+            <ion-row style="margin-bottom:20px;" class="row_height1">
+                <span class="fontsize_small" style="width:10%; color:#aaaaaa">+ 194</span>
+                <ion-icon name="md-heart" style="width:80%; text-align:left; float:left; color:#aaaaaa;"></ion-icon>
+            </ion-row>
+        </ion-row>
+
+
+        <ion-row style="width:100%; border-bottom:1px solid #c1bdc5;"></ion-row>
+    </ion-row>
+
+    <ion-row class="homepage_part">
+
+        <ion-row style="margin-top:20px; color:#c5c5c5;">
+            <span class="fontsize_small" style="text-align:right;">4 hr ago</span>
+        </ion-row>
+      
+        <ion-row class="image_style" >
+            <ion-row style="height: 200px; position:relative;" (click) = "goto_stay_infor()">
+                <ion-row style="position: relative;">
+                    <img src="assets/img/2.png" style="width:100%; position:absolute;"/>
+                    <ion-row  style="height:25px; margin-top: 15px; position:absolute;">
+                            <span style="width:10%; height:100%; float:right; margin-left: auto;">
+                                <img src="assets/img/fix.png" class="fix_icon">
+                            </span>
+                            <span style="width:10%; height:100%; float:right;">
+                                <img src="assets/img/undo.png" class="undo_icon">
+                            </span>
+                    </ion-row>
+                </ion-row>
+            </ion-row>
+
+            <ion-row class="row_height">
+                <ion-col col-8>
+                    <span class="fontsize_mid" style="margin-left: -5px;">Mountain Creek Golf Resort</span>
+                </ion-col>
+
+                <ion-col col-4>
+                    <span class="fontsize_small">THB 2,450.00</span>
+                </ion-col>
+            </ion-row>
+
+
+            <ion-row class="row_height">
+                <span class="fontsize_mid">Khao Yai / Thailand</span>
+            </ion-row>
+
+            <ion-row style="margin-bottom:20px;" class="row_height1">
+                <span class="fontsize_small" style="width:10%; color:#aaaaaa">+ 194</span>
+                <ion-icon name="md-heart" style="width:80%; text-align:left; float:left; color:#aaaaaa;"></ion-icon>
+            </ion-row>
+        </ion-row>
+
+        <ion-row style="width:100%; border-bottom:1px solid #c1bdc5;"></ion-row>
+    </ion-row>
+
+
+    <ion-row class="homepage_part">
+      
+        <ion-row>
+            <ion-col col-6>
+                <ion-row style="margin-top:20px; color:#c5c5c5;">
+                    <span class="fontsize_small" style="text-align:right;">4 hr 50 min ago</span>
+                </ion-row>
+              
+                <ion-row class="image_style">
+                    <ion-row style="height: 245px; position:relative;" (click)="goto_exp_infor()">
+                        <ion-row style="position: relative;">
+                            <img src="assets/img/hei2.png" style="width:100%; position:absolute;"/>
+                            <ion-row  style="height:25px; margin-top: 15px; position:absolute;">
+                                    <span style="width:20%; height:100%; float:right; margin-left: auto;">
+                                        <img src="assets/img/fix.png" class="fix_icon">
+                                    </span>
+                                    <span style="width:20%; height:100%; float:right;">
+                                        <img src="assets/img/undo.png" class="undo_icon">
+                                    </span>
+                            </ion-row>
+                        </ion-row>
+                    </ion-row>
+          
+                    <ion-row class="row_height">
+                            <span class="fontsize_small">THB 850.00</span>
+                    </ion-row>
+            
+            
+                    <ion-row class="row_height">
+                            <span class="fontsize_mid">Chiang Dao Cave,</span>
+                    </ion-row>
+
+                    <ion-row class="row_height">
+                        <span class="fontsize_mid">Karen Long</span>
+                    </ion-row>
+            
+                    <ion-row class="row_height">
+                        <span class="fontsize_mid">Chiang Mai / Thai</span>
+                    </ion-row>
+
+                    <ion-row style="margin-bottom:20px;" class="row_height1">
+                        <span class="fontsize_small" style="width:20%; color:#aaaaaa;">+ 194</span>
+                        <ion-icon name="md-heart" style="width:50%; text-align:left; float:left; color:#aaaaaa;"></ion-icon>
+                    </ion-row>
+                </ion-row>
+            </ion-col>
+
+            <ion-col col-6>
+                <ion-row style="margin-top:20px; color:#c5c5c5;">
+                    <span class="fontsize_small" style="text-align:right;">6 hr ago</span>
+                </ion-row>
+                
+                <ion-row class="image_style">
+                    <ion-row style="height: 245px; position:relative;" (click)="goto_exp_infor()">
+                        <ion-row style="position: relative;">
+                            <img src="assets/img/hei1.png" style="width:100%; position:absolute;"/>
+                            <ion-row  style="height:25px; margin-top: 15px; position:absolute;">
+                                    <span style="width:20%; height:100%; float:right; margin-left: auto;">
+                                        <img src="assets/img/fix.png" class="fix_icon">
+                                    </span>
+                                    <span style="width:20%; height:100%; float:right;">
+                                        <img src="assets/img/undo.png" class="undo_icon">
+                                    </span>
+                            </ion-row>
+                        </ion-row>
+                    </ion-row>
+            
+                    <ion-row class="row_height">
+                        <span class="fontsize_small">THB 700.00</span>
+                    </ion-row>
+            
+            
+                    <ion-row class="row_height">
+                        <span class="fontsize_mid">Amanzi Island Lodge</span>
+                    </ion-row>
+  
+                    <ion-row class="row_height">
+                        <span class="fontsize_mid">Operates</span>
+                    </ion-row>
+            
+                    <ion-row class="row_height">
+                        <span class="fontsize_mid">Chiang Mai / Thai</span>
+                    </ion-row>
+  
+                    <ion-row style="margin-bottom:20px;" class="row_height1">
+                        <span class="fontsize_small" style="width:20%; color:#aaaaaa">+ 194</span>
+                        <ion-icon name="md-heart" style="width:50%; text-align:left; float:left; color:#aaaaaa;"></ion-icon>
+                    </ion-row>
+                </ion-row>            
+            </ion-col>
+        </ion-row>
+
+
+        <ion-row style="width:100%; border-bottom:1px solid #c1bdc5; margin-top:20px;"></ion-row>
+
+    </ion-row>
+
+</ion-content>
+
+<ion-footer style="background-color:white; width:100%; height:40px;">
+    <ion-row style="margin-top:4%;">
+        <ion-row style="width:20%; float:left; margin-left: 5%;">
+            <!-- <ion-icon name="ios-home-outline" class="bottom_icon" (click)="goto_homepage()"></ion-icon> -->
+            <img src="assets/img/home.png" class="home_icon" (click)="goto_homepage()"/>
+        </ion-row>
+      
+        <ion-row style="width:20%; float:left;">
+            <!-- <ion-icon name="ios-search-outline" class="bottom_icon" (click)="click_search_button()"></ion-icon> -->
+            <img src="assets/img/search.png" class="search_icon" (click)="click_search_button()"/>
+        </ion-row>
+      
+        <ion-row style="width:20%; float:left;">
+            <!-- <ion-icon name="ios-notifications-outline" class="bottom_icon" (click)="click_notification_button()"></ion-icon> -->
+            <img src="assets/img/noti.png" class="alert_icon" (click)="click_notification_button()"/>
+        </ion-row>
+      
+        <ion-row style="width:20%; float:left;">
+            <!-- <ion-icon name="ios-settings-outline" class="bottom_icon" (click)="click_account_button()"></ion-icon> -->
+            <img src="assets/img/setting.png" class="setting_icon" (click)="click_account_button()"/>
+        </ion-row>
+    </ion-row>
+</ion-footer>

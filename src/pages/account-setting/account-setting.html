@@ -1,0 +1,94 @@
+<!--
+  Generated template for the AccountSettingPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+<ion-header>
+
+    <ion-row>
+        <span style="text-align: center; margin-top: 10px;" class="fontsize_mid1">ACCOUNT & SETTINGS</span>
+    </ion-row>
+
+</ion-header>
+
+
+<ion-content padding style="background-image:url('assets/img/hei10.png'); background-size:auto 100%;">
+    <ion-row style="margin-top:30px;">
+        <img src="assets/img/r_icon.png" class="mark_style"/>
+    </ion-row>
+
+    <ion-row style="margin-top:20%;" (click)="goto_profile()">
+        <ion-row class="image_style1">
+            <img src="assets/img/user1.png" class="image_style2"/>
+        </ion-row>
+
+        <ion-row class="image_detail1">
+            <span class="image_detail2 fontsize_big1">Profile</span>
+        </ion-row>
+        <ion-row class="row_border"></ion-row>
+    </ion-row>
+
+    <ion-row style="margin-top:10%;" (click)="goto_mybook()">
+        <ion-row class="image_style1">
+            <img src="assets/img/mybooking.png" class="image_style2"/>
+        </ion-row>
+
+        <ion-row class="image_detail1">
+            <span class="image_detail2 fontsize_big1">My Booking</span>
+        </ion-row>
+        <ion-row class="row_border"></ion-row>
+    </ion-row>
+    
+
+    <ion-row style="margin-top:10%;" (click)="goto_notification()">
+        <ion-row class="image_style1">
+            <img src="assets/img/alert1.png" class="image_style2"/>
+        </ion-row>
+
+        <ion-row class="image_detail1">
+            <span class="image_detail2 fontsize_big1">Notifications</span>
+        </ion-row>
+        <ion-row class="row_border"></ion-row>
+    </ion-row>
+    
+
+    <ion-row style="margin-top:10%;" (click)="goto_login()">
+        <ion-row class="image_style1">
+            <img src="assets/img/login.png" class="image_style2"/>
+        </ion-row>
+
+        <ion-row class="image_detail1">
+            <span class="image_detail2 fontsize_big1">Log In</span>
+        </ion-row>
+        <ion-row class="row_border"></ion-row>
+    </ion-row>
+    
+    
+
+</ion-content>
+
+<ion-footer style="background-color:white; width:100%; height:40px;">
+    <ion-row style="margin-top:4%;">
+        <ion-row style="width:20%; float:left; margin-left: 5%;">
+            <!-- <ion-icon name="ios-home-outline" class="bottom_icon" (click)="goto_homepage()"></ion-icon> -->
+            <img src="assets/img/home.png" class="home_icon" (click)="goto_homepage()"/>
+        </ion-row>
+        
+        <ion-row style="width:20%; float:left;">
+            <!-- <ion-icon name="ios-search-outline" class="bottom_icon" (click)="click_search_button()"></ion-icon> -->
+            <img src="assets/img/search.png" class="search_icon" (click)="click_search_button()"/>
+        </ion-row>
+        
+        <ion-row style="width:20%; float:left;">
+            <!-- <ion-icon name="ios-notifications-outline" class="bottom_icon" (click)="click_notification_button()"></ion-icon> -->
+            <img src="assets/img/noti.png" class="alert_icon" (click)="click_notification_button()"/>
+        </ion-row>
+        
+        <ion-row style="width:20%; float:left;">
+            <!-- <ion-icon name="ios-settings-outline" class="bottom_icon" (click)="click_account_button()"></ion-icon> -->
+            <img src="assets/img/setting.png" class="setting_icon" (click)="click_account_button()"/>
+        </ion-row>
+    </ion-row>
+</ion-footer>

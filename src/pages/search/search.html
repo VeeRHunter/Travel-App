@@ -1,0 +1,98 @@
+<!--
+  Generated template for the SearchPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<!-- <ion-header> -->
+
+  <!-- <ion-navbar>
+    <ion-title>search</ion-title>
+  </ion-navbar> -->
+<!-- 
+</ion-header> -->
+
+
+<ion-content padding style="background-image:url('assets/img/hei10.png'); border-radius:5px; background-size: auto 100%;">
+
+  <ion-row style="margin:auto; background-color:#f9f9f9; border-radius:5px; margin-top:20%;">
+        <ion-segment id="search_head">
+            <ion-segment-button [ngClass]="'segment-activated'" value="stay" id="search_stay" (click)="click_stay()">
+            STAY
+            </ion-segment-button>
+            <ion-segment-button value="experience" id="search_experience" (click)="click_exp()">
+            EXPERIENCE
+            </ion-segment-button>
+            <ion-segment-button value="package" id="search_package" (click)="click_pak()">
+            PACKAGE
+            </ion-segment-button>
+        </ion-segment>
+
+      <ion-row class="element_stay">
+          <ion-col col-9>
+              <ion-input type="text" placeholder="Anywhere" class="input_style"></ion-input>
+          </ion-col>
+
+          <ion-col col-3>
+              <ion-icon name="ios-pin-outline" class="pin_icon"></ion-icon>
+          </ion-col>
+      </ion-row>
+
+      <ion-row class="element_stay">
+          <ion-col col-9>
+              <ion-input type="text" placeholder="Guest" class="input_style"></ion-input>
+          </ion-col>
+
+          <ion-col col-3>
+              <img src="assets/img/user.png" class="user_icon_style"/>
+          </ion-col>
+      </ion-row>
+
+      <ion-row class="element_stay">
+          <ion-col col-9>
+              <ion-input type="text" placeholder="Room" class="input_style"></ion-input>
+          </ion-col>
+
+          <ion-col col-3>
+              <img src="assets/img/car.png" class="car_icon_style"/>
+          </ion-col>
+      </ion-row>
+
+      <ion-row class="element_stay">
+          <ion-col col-9>
+              <ion-input type="text" placeholder="Check in date" class="input_style"></ion-input>
+          </ion-col>
+
+          <ion-col col-3>
+              <img src="assets/img/calendar.png" class="cal_icon_style"/>
+          </ion-col>
+      </ion-row>
+
+      <button ion-button class="book_button_style1" (click)="click_search()" style="margin-bottom:10%; margin-top: 15%;">search</button>
+  </ion-row>
+
+</ion-content>
+
+<ion-footer style="background-color:white; width:100%; height:40px;">
+    <ion-row style="margin-top:4%;">
+        <ion-row style="width:20%; float:left; margin-left: 5%;">
+            <!-- <ion-icon name="ios-home-outline" class="bottom_icon" (click)="goto_homepage()"></ion-icon> -->
+            <img src="assets/img/home.png" class="home_icon" (click)="goto_homepage()"/>
+        </ion-row>
+        
+        <ion-row style="width:20%; float:left;">
+            <!-- <ion-icon name="ios-search-outline" class="bottom_icon" (click)="click_search_button()"></ion-icon> -->
+            <img src="assets/img/search.png" class="search_icon" (click)="click_search_button()"/>
+        </ion-row>
+        
+        <ion-row style="width:20%; float:left;">
+            <!-- <ion-icon name="ios-notifications-outline" class="bottom_icon" (click)="click_notification_button()"></ion-icon> -->
+            <img src="assets/img/noti.png" class="alert_icon" (click)="click_notification_button()"/>
+        </ion-row>
+        
+        <ion-row style="width:20%; float:left;">
+            <!-- <ion-icon name="ios-settings-outline" class="bottom_icon" (click)="click_account_button()"></ion-icon> -->
+            <img src="assets/img/setting.png" class="setting_icon" (click)="click_account_button()"/>
+        </ion-row>
+    </ion-row>
+</ion-footer>

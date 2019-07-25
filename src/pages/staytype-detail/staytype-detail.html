@@ -1,0 +1,207 @@
+<!--
+  Generated template for the StaytypeDetailPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<!-- <ion-header>
+
+  <ion-navbar>
+    <ion-title>staytype-detail</ion-title>
+  </ion-navbar>
+
+</ion-header> -->
+
+
+<ion-content padding>
+    
+    <ion-row style="margin-top:5%; margin-left:10%;">
+            <img src="assets/img/close.png" class="png_style" (click)="goto_back()"/>
+    </ion-row>
+    <ion-row style="margin-top:10%;">
+        <p class="fontsize_big1 p_style">Mountain Creek Golf</p>
+        <p class="fontsize_big1 p_style">Restore and Resident</p>
+        <p class="fontsize_mid1 p_style" style="margin-top:0%;">Luxury Stays</p>
+        <p class="fontsize_mid1 p_style" style="margin-top:0%;">Khao Yai / Thailands</p>
+    </ion-row>
+
+    <ion-row style="margin-top:10%;">
+        <span class="fontsize_big1" style="width:35%; margin-top:5%;">
+          Standard Room
+        </span>
+        <span style="border-bottom: 1px solid #dbdbdb; width:60%;"></span>
+    </ion-row>
+
+    <ion-row style="margin-top:15%; font-size:1.4rem;">
+        <ion-row style="width:20%; margin-left:10%;">
+            <img src="assets/img/home.png" class="hotel_icon"/>
+            <ion-row class="fontsize_mid1" style="text-align:center; padding-left: 20%; margin-top:20%;">resort</ion-row>
+        </ion-row>
+
+        <ion-row style="width:22%; margin-left:10%;">
+            <img src="assets/img/car.png" class="hotel_icon"/>
+            <ion-row class="fontsize_mid1" style="text-align:center; margin-top:20%;">double bed</ion-row>
+        </ion-row>
+
+        <ion-row style="width:20%; margin-left:10%;">
+            <img src="assets/img/user1.png" class="hotel_icon"/>
+            <ion-row class="fontsize_mid1" style="text-align:center; margin-top:20%;">2 person</ion-row>
+        </ion-row>
+    </ion-row>
+
+    <ion-row style="margin-top:10%;">
+        <ion-row class="fontsize_mid1" style="width:80%; margin-left:20%;">resort 1 bedroom / 1 toilet
+            <br/> Sea view
+        </ion-row>
+    </ion-row>
+
+    <ion-row style="margin-top:10%;">
+        <span class="fontsize_big1" style="width:20%; margin-top:5%;">
+            Facilities
+        </span>
+        <span style="border-bottom: 1px solid #dbdbdb; width:75%;"></span>
+    </ion-row>
+
+    <ion-row style="margin-top:5%;">
+        <ion-col col-4 style="margin-left:19%;">
+            <p class="fontsize_mid1">Free Wi-fi</p>
+            <p class="fontsize_mid1">Air Condition</p>
+            <p class="fontsize_mid1">Led Cable TV</p>
+            <p class="fontsize_mid1">Sofa bed</p>
+        </ion-col>
+
+        <ion-col col-4 style="margin-left:5%;">
+            <p class="fontsize_mid1">Parking Area</p>
+            <p class="fontsize_mid1">Swimming Pool</p>
+            <p class="fontsize_mid1">Kitchen</p>
+        </ion-col>
+    </ion-row>
+
+
+    <ion-row style="margin-top:10%;">
+        <span class="fontsize_big1" style="font-size:1.5rem; width:25%; margin-top:5%;">
+            Amenities
+        </span>
+        <span style="border-bottom: 1px solid #dbdbdb; width:70%;"></span>
+    </ion-row>
+
+    <ion-row style="margin-top:5%;">
+        <ion-col col-4 style="margin-left:19%;">
+            <p class="fontsize_mid1">Shampoo</p>
+            <p class="fontsize_mid1">Hangers</p>
+            <p class="fontsize_mid1">Hair Dryer</p>
+        </ion-col>
+
+        <ion-col col-4 style="margin-left:5%;">
+            <p class="fontsize_mid1">Essentials</p>
+            <p class="fontsize_mid1">Iron</p>
+            <p class="fontsize_mid1">Bathtub</p>
+        </ion-col>
+    </ion-row>
+
+    <ion-row style="margin-top:10%;">
+        <span class="fontsize_big1" style="width:35%; margin-top:5%;">
+            Property Details
+        </span>
+        <span style="border-bottom: 1px solid #dbdbdb; width:60%;"></span>
+    </ion-row>
+
+    <ion-row style="margin-top:5%;">
+        <ion-col col-6 style="margin-left:19%;">
+            <p class="fontsize_mid1">Check in 11 AM</p>
+            <p class="fontsize_mid1">Check out 10 AM</p>
+            <p class="fontsize_mid1">Not suitable for pets</p>
+            <p class="fontsize_mid1">No parties or events</p>
+        </ion-col>
+    </ion-row>
+
+    <ion-row style="margin-top:10%;">
+        <span class="fontsize_big1" style="width:30%; margin-top:5%;">
+            Extra Service
+        </span>
+        <span style="border-bottom: 1px solid #dbdbdb; width:65%;"></span>
+    </ion-row>
+
+    <ion-row style="margin-top:5%;">
+        <ion-col col-8 style="margin-left:19%;">
+            <p class="fontsize_mid1">shuttle service to the areport</p>
+        </ion-col>
+    </ion-row>
+
+    <ion-row style="margin-top:10%;">
+        <span class="fontsize_big1" style="width:15%; margin-top:5%;">
+            Gallery
+        </span>
+        <span style="border-bottom: 1px solid #dbdbdb; width:80%;"></span>
+    </ion-row>
+
+    <ion-row style=" margin-top:10%;">
+        <ion-slides autoplay="3000" loop="true" speed="1000">
+            <ion-slide>
+                <ion-row>
+                    <ion-row style="width:32%; margin-left:0.5%; margin-right:0.5%; position:relative;" *ngFor = "let list of recommened_item1" (click)="goto_gallery()">
+                        <ion-row style="position: relative; height:80px;">
+                            <img src="assets/img/{{list}}.png" style="width:100%; position:absolute; height:100%;"/>
+                            <ion-row style="height:20px; margin-top: 5px; position:absolute;">
+                                <ion-icon name="md-heart" class="heart_icon"></ion-icon>
+                            </ion-row>
+                        </ion-row>
+                    </ion-row>
+                </ion-row>
+            </ion-slide>
+    
+            <!-- <ion-slide>
+                <ion-row>
+                    <ion-col col-4 *ngFor="let category of recommened_item1" style="width:100%;height:100%;">
+                    <img class="imgclass" src="assets/img/{{category}}.png" style="padding-left:5%;width:100%;height:100%;"/>
+                    </ion-col>
+                </ion-row>
+            </ion-slide>
+    
+            <ion-slide>
+                <ion-row>
+                    <ion-col col-4 *ngFor="let category of recommened_item1" style="width:100%;height:100%;">
+                    <img class="imgclass" src="assets/img/{{category}}.png" style="padding-left:5%;width:100%;height:100%;"/>
+                    </ion-col>
+                </ion-row>
+            </ion-slide> -->
+        </ion-slides>
+    </ion-row>
+
+    <ion-row style=" margin-top:3%;">
+        <ion-slides autoplay="3000" loop="true" speed="1000">
+            <ion-slide>
+                <ion-row>
+                    <ion-row style="width:32%; margin-left:0.5%; margin-right:0.5%; position:relative;" *ngFor = "let list of recommened_item1" (click)="goto_gallery()">
+                        <ion-row style="position: relative; height:80px;">
+                            <img src="assets/img/{{list}}.png" style="width:100%; position:absolute; height:100%;"/>
+                            <ion-row style="height:20px; margin-top: 5px; position:absolute;">
+                                <ion-icon name="md-heart" class="heart_icon"></ion-icon>
+                            </ion-row>
+                        </ion-row>
+                    </ion-row>
+                </ion-row>
+            </ion-slide>
+        </ion-slides>
+    </ion-row>
+
+    <ion-row style=" margin-top:3%;">
+        <ion-slides autoplay="3000" loop="true" speed="1000">
+            <ion-slide>
+                <ion-row>
+                    <ion-row style="width:32%; margin-left:0.5%; margin-right:0.5%; position:relative;" *ngFor = "let list of recommened_item1" (click)="goto_gallery()">
+                        <ion-row style="position: relative; height:80px;">
+                            <img src="assets/img/{{list}}.png" style="width:100%; position:absolute; height:100%;"/>
+                            <ion-row style="height:20px; margin-top: 5px; position:absolute;">
+                                <ion-icon name="md-heart" class="heart_icon"></ion-icon>
+                            </ion-row>
+                        </ion-row>
+                    </ion-row>
+                </ion-row>
+            </ion-slide>
+        </ion-slides>
+    </ion-row>
+
+    <button ion-button class="book_button_style" (click)="goto_stay_confirm()">book now</button>
+
+</ion-content>

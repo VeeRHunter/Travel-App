@@ -1,0 +1,28 @@
+page-maps {
+
+    .png_style{
+        width: 35px;
+        height: 35px;
+        margin-top: -6%;
+        margin-left: -5%;
+        margin-right: 5%;
+        position: absolute;
+        top: 15%;
+        left: 15%;
+    }
+
+    .img_style{
+        width:110%; 
+        height:110%; 
+        position:relative;
+        margin-top: -5%;
+        margin-left: -5%;
+    }
+    .border_circle{
+        border-radius: 50%;
+        height: 60px;
+        width: 60px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

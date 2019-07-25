@@ -1,0 +1,46 @@
+page-stay-confirm {
+    ion-row{
+        width:100%;
+    }
+
+    .image_style{
+        position: relative;
+        width:100%;
+    }
+
+    .homepage_part{
+        margin-top: 20px;
+    }
+
+    .row_height{
+        margin-top: 10px;
+    }
+
+    .bottom_icon{
+        // width:100%; 
+        margin-left:auto;
+        // margin-right:auto;
+        transform: scale(2,2);
+    }
+
+    .row_border{
+        border-bottom: 1px solid #8f8f91;
+        width: 100%;
+        margin-top: 5%;
+    }
+    ion-select{
+        border: 1px solid #8f8f91;
+        border-radius: 25px;
+        max-width: 100%;
+    }
+
+    .text_border{
+        border:1px solid #dde2e9;
+        border-radius: 20px;
+        width: 100%;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        padding-left: 10px;
+    }
+
+}

@@ -1,0 +1,77 @@
+<!--
+  Generated template for the LoginPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <!-- <ion-navbar>
+      <span class="fontsize_big2" style="text-align: center; margin-left: 30%;">Log in</span>
+  </ion-navbar> -->
+    <ion-row style="margin-top: 10px;background-color: white;">
+        <ion-col col-3>
+            <!-- <ion-icon name="md-menu" style="margin-left:10px; transform:scale(2, 2); margin-top: 5px;" (click)="click_menu_button();"></ion-icon> -->
+            <img src="assets/img/back.png" class="back_style" (click)="goto_back()"/>
+        </ion-col>
+        <ion-col col-9>
+            <span class="fontsize_mid1 header_style">Log in</span>
+        </ion-col>
+    </ion-row>
+
+</ion-header>
+
+
+<ion-content padding>
+    <ion-row class="upimage">
+      <img src="assets/img/signupfull.png" style="width:100%; margin-top:-5%; height: 100%;
+      "/>
+    </ion-row>
+    
+    <ion-row>
+        <span style="font-size:2rem; width:20%; margin-top:5%;">
+            Login
+        </span>
+        <span style="border-bottom: 1px solid #dbdbdb; width:70%;"></span>
+    </ion-row>
+  
+    <ion-row style="width:80%; margin-left:10%; margin-top:10%;">
+        <ion-input type="text" [(ngModel)]="userData.email" placeholder="E-mail" class="text_border" (ionChange)="emailChange()"></ion-input>
+    </ion-row>
+    <ion-label *ngIf = "e_mail" class="warning_style">{{warnning_email}}</ion-label>
+  
+    <ion-row style="width:80%; margin-left:10%;">
+        <ion-input type="password" [(ngModel)]="userData.password" placeholder="Password" class="text_border" (ionChange)="passChange()"></ion-input>
+    </ion-row>
+    <ion-label *ngIf = "main_password" class="warning_style">{{warnning_pass}}</ion-label>
+    <ion-row>
+        <button ion-button class="button_border" outline color="#4c4c4e" style="margin-top: 10%;" (click)="goto_login()">
+            <span style="color:#4c4c4e; text-transform:uppercase;">log in</span>
+        </button>
+    </ion-row>
+  
+</ion-content>
+
+<ion-footer style="background-color:white; width:100%; height:40px;">
+    <ion-row style="margin-top:4%;">
+        <ion-row style="width:20%; float:left; margin-left: 5%;">
+            <!-- <ion-icon name="ios-home-outline" class="bottom_icon" (click)="goto_homepage()"></ion-icon> -->
+            <img src="assets/img/home.png" class="home_icon" (click)="goto_homepage()"/>
+        </ion-row>
+        
+        <ion-row style="width:20%; float:left;">
+            <!-- <ion-icon name="ios-search-outline" class="bottom_icon" (click)="click_search_button()"></ion-icon> -->
+            <img src="assets/img/search.png" class="search_icon" (click)="click_search_button()"/>
+        </ion-row>
+        
+        <ion-row style="width:20%; float:left;">
+            <!-- <ion-icon name="ios-notifications-outline" class="bottom_icon" (click)="click_notification_button()"></ion-icon> -->
+            <img src="assets/img/noti.png" class="alert_icon" (click)="click_notification_button()"/>
+        </ion-row>
+        
+        <ion-row style="width:20%; float:left;">
+            <!-- <ion-icon name="ios-settings-outline" class="bottom_icon" (click)="click_account_button()"></ion-icon> -->
+            <img src="assets/img/setting.png" class="setting_icon" (click)="click_account_button()"/>
+        </ion-row>
+    </ion-row>
+</ion-footer>

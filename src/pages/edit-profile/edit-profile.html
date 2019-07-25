@@ -1,0 +1,139 @@
+<!--
+  Generated template for the EditProfilePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header style="background-color:white; height:45px;">
+
+    <ion-row style="margin-top:15px; ">
+        <ion-row style="width:10%; float:left;">
+            <img src="assets/img/back.png" class="back_style" (click)="goto_back()"/>
+        </ion-row>
+
+        <ion-row style="width:65%; float:left;">
+            <span class="fontsize_mid1" style="text-align: center;">EDIT PROFILE</span>
+        </ion-row>
+
+        <ion-row style="width:20%; float:left;">
+            <span class="fontsize_mid1" style="text-align: right;" (click) = "click_save()">SAVE</span>
+        </ion-row>
+    </ion-row>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-row>
+      <img src="assets/img/6.png" class="back_style1"/>
+      <ion-row class="row_circle">
+          <ion-icon name="ios-camera-outline" class="ico_style"></ion-icon>
+      </ion-row>
+  </ion-row>
+
+  <ion-row class="txt_border">
+      <ion-col col-4>
+          <ion-label fix class="fontsize_mid1 label_style">First Name</ion-label>
+      </ion-col>
+
+      <ion-col col-8>
+          <ion-label fix class="fontsize_mid1">Alexandra</ion-label>
+      </ion-col>
+  </ion-row>
+
+  <ion-row class="txt_border">
+      <ion-col col-4>
+          <ion-label fix class="fontsize_mid1 label_style">Last Name</ion-label>
+      </ion-col>
+
+      <ion-col col-8>
+          <ion-label fix class="fontsize_mid1">Daddario</ion-label>
+      </ion-col>
+  </ion-row>
+
+  <ion-row class="txt_border">
+      <ion-col col-4>
+          <ion-label fix class="fontsize_mid1 label_style">About Me</ion-label>
+      </ion-col>
+
+      <ion-col col-8>
+          <ion-label fix class="fontsize_mid1">Anna was born on March..</ion-label>
+      </ion-col>
+  </ion-row>
+
+  <ion-row class="txt_border">
+      <ion-col col-4>
+          <ion-label fix class="fontsize_mid1 label_style">Phone</ion-label>
+      </ion-col>
+
+      <ion-col col-8>
+          <ion-label fix class="fontsize_mid1">0584330543</ion-label>
+      </ion-col>
+  </ion-row>
+
+  <ion-row class="txt_border">
+      <ion-col col-4>
+          <ion-label fix class="fontsize_mid1 label_style">E-mail</ion-label>
+      </ion-col>
+
+      <ion-col col-8>
+          <ion-label fix class="fontsize_mid1">Alexandra@gmail.com</ion-label>
+      </ion-col>
+  </ion-row>
+
+  <ion-row class="txt_border">
+      <ion-col col-4>
+          <ion-label fix class="fontsize_mid1 label_style">Location</ion-label>
+      </ion-col>
+
+      <ion-col col-8>
+          <ion-select [(ngModel)]="select_location" interface="popover" class="fontsize_mid1">
+              <ion-option value="loc1">Bangkok, Thailand</ion-option>
+              <ion-option value="loc2">Ottawa, Canada</ion-option>
+              <ion-option value="loc3">Tokyo, Japan</ion-option>
+              <ion-option value="loc4">Moscow, Russia</ion-option>
+              <ion-option value="loc5">Hanoi, Vietnam</ion-option>
+          </ion-select>
+      </ion-col>
+  </ion-row>
+
+  <ion-row class="txt_border">
+      <ion-col col-4>
+          <ion-label fix class="fontsize_mid1 label_style">gender</ion-label>
+      </ion-col>
+
+      <ion-col col-8>
+          <ion-select [(ngModel)]="select_gender" interface="popover" class="fontsize_mid1">
+              <ion-option value="male">Male</ion-option>
+              <ion-option value="female">Female</ion-option>
+          </ion-select>
+      </ion-col>
+  </ion-row>
+
+</ion-content>
+
+
+<ion-footer style="background-color:white; width:100%; height:40px;">
+    <ion-row style="margin-top:4%;">
+        <ion-row style="width:20%; float:left; margin-left: 5%;">
+            <!-- <ion-icon name="ios-home-outline" class="bottom_icon" (click)="goto_homepage()"></ion-icon> -->
+            <img src="assets/img/home.png" class="home_icon" (click)="goto_homepage()"/>
+        </ion-row>
+        
+        <ion-row style="width:20%; float:left;">
+            <!-- <ion-icon name="ios-search-outline" class="bottom_icon" (click)="click_search_button()"></ion-icon> -->
+            <img src="assets/img/search.png" class="search_icon" (click)="click_search_button()"/>
+        </ion-row>
+        
+        <ion-row style="width:20%; float:left;">
+            <!-- <ion-icon name="ios-notifications-outline" class="bottom_icon" (click)="click_notification_button()"></ion-icon> -->
+            <img src="assets/img/noti.png" class="alert_icon" (click)="click_notification_button()"/>
+        </ion-row>
+        
+        <ion-row style="width:20%; float:left;">
+            <!-- <ion-icon name="ios-settings-outline" class="bottom_icon" (click)="click_account_button()"></ion-icon> -->
+            <img src="assets/img/setting.png" class="setting_icon" (click)="click_account_button()"/>
+        </ion-row>
+    </ion-row>
+</ion-footer>

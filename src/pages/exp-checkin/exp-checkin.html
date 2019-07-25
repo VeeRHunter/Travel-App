@@ -1,0 +1,73 @@
+<!--
+  Generated template for the ExpCheckinPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <!-- <ion-navbar>
+    <ion-title>exp-checkin</ion-title>
+  </ion-navbar> -->
+
+</ion-header>
+
+
+<ion-content padding>
+
+    <ion-row style="margin-top:10%; margin-left:5%;">
+        <img src="assets/img/close.png" class="png_style" (click)="goto_back()"/>
+    </ion-row>
+    <ion-row style="margin-top:10%;">
+        <p class="fontsize_big2 p_style" style="font-size:1.8rem;">act_show.act_name</p>
+        <p class="fontsize_mid2 p_style" style="margin-top:0%;">{{act_show.act_by}}</p>
+        <p class="fontsize_mid2 p_style" style="margin-top:0%;">{{act_show.act_loc}}</p>
+    </ion-row>
+
+    <ion-row style="margin-top:5%;">
+        <span class="fontsize_big2" style="width:25%; margin-left:5%; margin-top:5%;">
+            Guests
+        </span>
+        <span style="border-bottom: 1px solid #dbdbdb; width:70%;"></span>
+    </ion-row>
+
+
+    <ion-row style="margin-left:5%; margin-top:5%">
+        <ion-col>   
+            <ion-select [(ngModel)]="adults" interface="popover" class="fontsize_small2" style="width:90%;">
+                <ion-option value="Adults1">Adults1</ion-option>
+                <ion-option value="Adults2">Adults2</ion-option>
+            </ion-select>
+        </ion-col>
+    </ion-row>
+
+    <ion-row style="margin-left:5%; margin-top:5%" > 
+        <ion-col>
+            <ion-select [(ngModel)]="child" interface="popover" class="fontsize_small2" style="width:90%;">
+                <ion-option value="Child1">Child(2-12 years)</ion-option>
+                <ion-option value="Child2">Child2(12-16 years)</ion-option>
+            </ion-select>
+        </ion-col> 
+    </ion-row>
+
+
+    <ion-row style="margin-top:5%;">
+        <span class="fontsize_big2" style="width:35%; margin-left:5%; margin-top:5%;">
+          Check In Date
+        </span>
+        <span style="border-bottom: 1px solid #dbdbdb; width:60%;"></span>
+    </ion-row>
+
+    <ion-row>
+        <ion-col col-3 style="margin-left:15%;">
+            <p class="fontsize_big2">Check In</p>
+        </ion-col>
+
+        <ion-col col-5 style="margin-left:5%;">
+            <ion-datetime displayFormat="YYYY MMM DD" [(ngModel)]="event.checkin" class="fontsize_big2"></ion-datetime>
+        </ion-col>
+    </ion-row>
+
+    <button ion-button class="book_button_style" (click)="goto_exp_type()">next</button>
+
+</ion-content>

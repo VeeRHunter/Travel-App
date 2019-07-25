@@ -1,0 +1,182 @@
+<!--
+  Generated template for the PackConfirmPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <!-- <ion-navbar>
+    <ion-title>pack-confirm</ion-title>
+  </ion-navbar> -->
+
+</ion-header>
+
+
+<ion-content padding>
+    <ion-row style="margin-top:5%;">
+        <ion-col col-6>
+            <ion-row style="margin-top:15%;">
+                <p class="fontsize_big2 p_style" style="font-size:1.8rem;">Chiang Mai Package Tours</p>
+                <p class="fontsize_big2 p_style" style="font-size:1.8rem;">Expoler</p>
+                <p class="fontsize_mid2 p_style" style="margin-top:0%;">Adventure Package</p>
+                <p class="fontsize_mid2 p_style" style="margin-top:0%;">Sampran / Thailand</p>
+            </ion-row> 
+        </ion-col>
+
+        <ion-col col-6>
+            <img src="assets/img/gps1.png" style="margin-top:10%; float:right;" (click)="goto_map()"/>
+        </ion-col>
+    </ion-row>
+      
+    <ion-row class="image_style" >
+        <ion-row style="position:relative; height: 185px;">
+            <ion-row style="position: relative;">
+                <img src="assets/img/2.png" style="width:100%; position:absolute;"/>
+                <ion-row  style="height:25px; margin-top: 15px; position:absolute;">
+                    <span style="width:10%; height:100%; float:right; margin-left: auto;">
+                        <img src="assets/img/fix.png" class="fix_icon">
+                    </span>
+                    <span style="width:10%; height:100%; float:right;">
+                        <img src="assets/img/undo.png" class="undo_icon">
+                    </span>
+                </ion-row>
+            </ion-row>
+        </ion-row>
+
+        <ion-row>
+            <ion-col col-4>
+                <img src="assets/img/hei1.png" style="width:100%; height:100%"/>
+            </ion-col>
+
+            <ion-col col-4>
+                <img src="assets/img/hei2.png" style="width:100%; height:100%"/>
+            </ion-col>
+
+            <ion-col col-4>
+                <img src="assets/img/hei3.png" style="width:100%; height:100%"/>
+            </ion-col>
+        </ion-row>
+    </ion-row>
+
+    <ion-row style="margin-top:10%;">
+        <ion-row>
+            <span class="fontsize_mid2" style="width:50%;">
+              1 Package / 2 Geusts
+            </span>
+            <span style="border-bottom: 1px solid #dbdbdb; width:50%;"></span>
+        </ion-row>
+        <ion-row>
+            <p class="fontsize_small2">3 days 2 night</p>
+            <ion-row>
+                <ion-col col-6>
+                    <p class="fontsize_mid2">Check In Date</p>
+                    <p class="fontsize_mid2">Check Out Date</p>
+                </ion-col>
+
+                <ion-col col-6>
+                    <p class="fontsize_mid2" style="text-align:right;">2017, July 30</p>
+                    <p class="fontsize_mid2" style="text-align:right;">2017, Sep 18</p>
+                </ion-col>
+            </ion-row>
+        </ion-row>
+        <ion-row class="row_border"></ion-row>
+
+        <ion-row>
+            <ion-col col-6>
+                <p class="fontsize_mid2">Price</p>
+                <p class="fontsize_mid2">Price + Vat.</p>
+                <p class="fontsize_small2">Free Cancellation</p>
+            </ion-col>
+
+            <ion-col col-6>
+                <p class="fontsize_mid2" style="text-align:right;">THB 38,000.00</p>
+                <p class="fontsize_mid2" style="text-align:right;">THB 38,480.00</p>
+            </ion-col>
+        </ion-row>
+    </ion-row>
+
+    <ion-row>
+        <ion-row style="margin-top:5%;">
+            <span style="font-size:1.8rem; width:50%; margin-top:5%;">
+              Contact Information
+            </span>
+            <span style="border-bottom: 1px solid #dbdbdb; width:45%;"></span>
+        </ion-row>
+        <ion-row style="width:80%; margin-left:10%;">
+            <ion-input type="text" placeholder="First Name" class="text_border fontsize_mid2"></ion-input>
+        </ion-row>
+      
+        <ion-row style="width:80%; margin-left:10%;">
+            <ion-input type="text" placeholder="Last Name" class="text_border fontsize_mid2"></ion-input>
+        </ion-row>
+      
+        <ion-row style="width:80%; margin-left:10%;">
+            <ion-input type="text" placeholder="E-mail" class="text_border fontsize_mid2"></ion-input>
+        </ion-row>
+      
+        <ion-row style="width:80%; margin-left:10%;">
+            <ion-input type="number" placeholder="Phone" class="text_border fontsize_mid2"></ion-input>
+        </ion-row>
+      
+        <ion-row style="width:80%; margin-left:10%;">
+            <ion-input type="text" placeholder="Country" class="text_border fontsize_mid2"></ion-input>
+        </ion-row>
+    
+        <ion-row>
+            <ion-checkbox color="secondary" style="float:left; width:8%; padding-top: 13px;"></ion-checkbox>
+            <p class="fontsize_mid2" style="width:90%;">I'm not a participant.I made a reservation for someone else</p>
+        </ion-row>
+    </ion-row>
+
+    <ion-row>
+        <ion-row style="margin-top:5%;">
+            <span class="fontsize_big2" style="font-size:1.8rem; width:30%; margin-top:5%;">
+              Participants
+            </span>
+            <span style="border-bottom: 1px solid #dbdbdb; width:65%;"></span>
+        </ion-row>
+        <ion-row style="width:80%; margin-left:10%;">
+          <ion-input type="text" placeholder="First Name" class="text_border fontsize_big2"></ion-input>
+        </ion-row>
+      
+        <ion-row style="width:80%; margin-left:10%;">
+            <ion-input type="text" placeholder="Last Name" class="text_border fontsize_big2"></ion-input>
+        </ion-row>
+      
+        <ion-row style="width:80%; margin-left:10%;">
+            <ion-input type="number" placeholder="Phone" class="text_border fontsize_big2"></ion-input>
+        </ion-row>
+      
+        <ion-row style="width:80%; margin-left:10%;">
+            <ion-input type="text" placeholder="Country" class="text_border"></ion-input>
+        </ion-row>
+    
+        <button ion-button class="book_button_style2" (click)="goto_payment()">confirm</button>
+    </ion-row>
+
+</ion-content>
+
+<ion-footer style="background-color:white; width:100%; height:40px;">
+    <ion-row style="margin-top:4%;">
+        <ion-row style="width:20%; float:left; margin-left: 5%;">
+            <!-- <ion-icon name="ios-home-outline" class="bottom_icon" (click)="goto_homepage()"></ion-icon> -->
+            <img src="assets/img/home.png" class="home_icon" (click)="goto_homepage()"/>
+        </ion-row>
+        
+        <ion-row style="width:20%; float:left;">
+            <!-- <ion-icon name="ios-search-outline" class="bottom_icon" (click)="click_search_button()"></ion-icon> -->
+            <img src="assets/img/search.png" class="search_icon" (click)="click_search_button()"/>
+        </ion-row>
+        
+        <ion-row style="width:20%; float:left;">
+            <!-- <ion-icon name="ios-notifications-outline" class="bottom_icon" (click)="click_notification_button()"></ion-icon> -->
+            <img src="assets/img/noti.png" class="alert_icon" (click)="click_notification_button()"/>
+        </ion-row>
+        
+        <ion-row style="width:20%; float:left;">
+            <!-- <ion-icon name="ios-settings-outline" class="bottom_icon" (click)="click_account_button()"></ion-icon> -->
+            <img src="assets/img/setting.png" class="setting_icon" (click)="click_account_button()"/>
+        </ion-row>
+    </ion-row>
+</ion-footer>

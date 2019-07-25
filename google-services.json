@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "4299487423",
+    "firebase_url": "https://pushnotonesignal.firebaseio.com",
+    "project_id": "pushnotonesignal",
+    "storage_bucket": "pushnotonesignal.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:4299487423:android:c12b1bcdfc280373",
+        "android_client_info": {
+          "package_name": "com.mvp.project"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "4299487423-d1rr4vmsm7qc1rvg6p2847d0q1uae320.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDZV_xvGBw0CsR06hKljkdvyfFdQ6JRnwM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

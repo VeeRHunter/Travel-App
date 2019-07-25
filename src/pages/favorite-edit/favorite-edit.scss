@@ -1,0 +1,21 @@
+page-favorite-edit {
+    .back_image{
+        width: 100%;
+        height: 100%;
+    }
+
+    .minus_icon{
+        top: 20%; 
+        margin-left: 83%;
+        position:absolute;
+    }
+
+    .bottom_txt{
+        position:absolute; 
+        text-align:center; 
+        filter:opacity(0.7); 
+        background-color:white; 
+        top:36%;
+        width: 93%;
+    }
+}

@@ -1,0 +1,88 @@
+<!--
+  Generated template for the StayRoomtypePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<!-- <ion-header>
+
+  <ion-navbar>
+    <ion-title>stay-roomtype</ion-title>
+  </ion-navbar>
+
+</ion-header> -->
+
+
+<ion-content padding>
+
+    <ion-row style="margin-top:5%; margin-left:10%;">
+        <img src="assets/img/close.png" class="png_style" (click)="goto_back()"/>
+    </ion-row>
+    <ion-row style="margin-top:10%;">
+        <p class="fontsize_big1 p_style">{{hotel_data.hotel_name}}</p>
+        <!-- <p class="fontsize_big1 p_style">Restore and Resident</p> -->
+        <p class="fontsize_mid1 p_style" style="margin-top:0%;">{{hotel_data.hotel_address}}</p>
+        <!-- <p class="fontsize_mid1 p_style" style="margin-top:0%;">Khao Yai / Thailands</p> -->
+    </ion-row>
+
+    <ion-row style="margin-top:10%;">
+        <span class="fontsize_big1" style="width:25%; margin-left:5%; margin-top:5%;">
+          Room Type
+        </span>
+        <span style="border-bottom: 1px solid #dbdbdb; width:70%;"></span>
+    </ion-row>
+
+    <ion-row *ngFor = "let list of room_typeName; let i = index">
+        <ion-row style="height:80px; margin-top:10%;" *ngIf = "room_typeImgCnt[i] > 0">
+            <ion-slides autoplay="3000" loop="true" speed="1000">
+                <ion-slide *ngFor = "let slid_index of slider_list[i]">
+                    <ion-row>
+                      <ion-col col-3 *ngFor="let category of [0,1,2,3]; let j = index" style="width:100%;height:100%;">
+                        <img class="imgclass" src="{{room_typeImage[i][slid_index * 4 + j]}}" *ngIf = "slid_index * 4 + j < room_typeImage[i].length" class="img_style" (click)="goto_staytype_detail(i)"/>
+                      </ion-col>
+                    </ion-row>
+                </ion-slide>
+            </ion-slides>
+        </ion-row>
+    
+        <ion-row>
+            <p class="fontsize_mid1" style="width:50%;">{{list}}</p>
+            <p class="fontsize_mid1" style="width:50%; text-align:right;">THB {{total_price}}</p>
+        </ion-row>
+    
+        <ion-row style="margin-top:-5%">
+            <ion-col col-4>
+              <ion-icon name="ios-restaurant-outline" class="icon_style1"></ion-icon>
+              <p class="fontsize_small1" style="width:80%;">breakfast</p>
+            </ion-col>
+    
+            <ion-col col-4>
+                <ion-icon name="ios-person-outline" class="icon_style1"></ion-icon>
+                <p class="fontsize_small1" style="width:80%;">2 guest</p>
+              </ion-col>
+    
+            <ion-col col-4>
+                <ion-select [(ngModel)]="select_room" interface="popover" class="fontsize_small1">
+                    <ion-option value="room1">Room1</ion-option>
+                    <ion-option value="room2">Room2</ion-option>
+                    <ion-option value="room3">Room3</ion-option>
+                </ion-select>        
+            </ion-col>
+        </ion-row>
+    
+        <ion-row>
+            <img src="assets/img/pay_icon.png" class="icon_style"/>
+            <p class="fontsize_small1" style="width:80%;">Paynothing until {{hotel_data.hotel_checkin}}</p>
+        </ion-row>
+    
+        <ion-row>
+            <img src="assets/img/reload_icon.png" class="icon_style"/>
+            <p class="fontsize_small1" style="width:80%;">Free cancellation before {{hotel_data.hotel_checkout}}</p>
+    
+        </ion-row>
+    
+        <button ion-button class="book_button_style" (click)="goto_staytype_detail(i)">book now</button>
+        <ion-row class="row_border"></ion-row>
+    </ion-row>
+
+</ion-content>

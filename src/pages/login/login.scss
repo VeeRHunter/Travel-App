@@ -1,0 +1,32 @@
+page-login {
+    .text_border{
+        border:1px solid #dde2e9;
+        border-radius: 20px;
+        width: 100%;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        padding-left: 10px;
+    }
+
+    .bottom_icon{
+        // width:100%; 
+        margin-left:auto;
+        // margin-right:auto;
+        transform: scale(2,2);
+    }
+
+    .button_border{
+        border:1px solid #87b6ec;
+        border-radius: 20px;
+        width: 50%;
+        margin: auto;
+        margin-top: 5%;
+    }
+
+    .upimage{
+        width: 110%;
+        margin-left:-5%;
+        margin-right:-5%;
+    }
+
+}

@@ -1,0 +1,233 @@
+<!--
+  Generated template for the ExpFeedPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <!-- <ion-navbar>
+    <span style="text-align: center; margin-left: 25%; font-size: 1.3rem; font-family:Helvetica;">FIND EXPERIENCES</span>
+  </ion-navbar> -->
+  <ion-row style="margin-top: 10px;background-color: white;">
+      <ion-col col-3>
+          <!-- <ion-icon name="md-menu" style="margin-left:10px; transform:scale(2, 2); margin-top: 5px;" (click)="click_menu_button();"></ion-icon> -->
+          <img src="assets/img/back.png" class="back_style" (click)="goto_back()"/>
+      </ion-col>
+      <ion-col col-9>
+          <span class="fontsize_mid1 header_style">FIND EXPERIENCES</span>
+      </ion-col>
+  </ion-row>
+
+</ion-header>
+
+<ion-content padding>
+
+    <ion-row style="margin-top:5%;" *ngFor = "let list of act_name; let i = index">     
+        <ion-row class="image_style">
+            <ion-row style="position: relative;">
+                <img src="{{act_imageList[i]}}" style="width:100%; height:100%; position:relative;"/>
+                <ion-row  style="height:25px; margin-top: 15px; position:absolute;">
+                        <span style="width:10%; height:100%; float:right; margin-left: auto;">
+                            <img src="assets/img/fix.png" class="fix_icon">
+                        </span>
+                        <span style="width:10%; height:100%; float:right;">
+                            <img src="assets/img/undo.png" class="undo_icon">
+                        </span>
+                </ion-row>
+            </ion-row>
+        </ion-row>
+
+        <ion-row>                    
+            <ion-col col-6>            
+                <ion-row class="row_height">
+                    <span class="fontsize_big2" style="font-size:1.8rem;">{{act_name[i]}}</span>
+                </ion-row>
+
+                <ion-row class="row_height">
+                    <span class="fontsize_big2" style="font-size:1.8rem;">{{act_loc_list[i][0].val}}</span>
+                </ion-row>
+            </ion-col>
+    
+            <ion-col col-6>            
+                <ion-row class="row_height">
+                    <span class="fontsize_mid2">THB 500.00 / adult</span>
+                </ion-row>            
+            
+                <ion-row class="row_height">
+                    <span class="fontsize_mid2">THB 450.00 / child</span>
+                </ion-row>         
+            </ion-col>
+        </ion-row>
+
+        <ion-row style="margin-top:5%;">
+            <span class="fontsize_mid2">{{act_by_list[i]}}</span>
+        </ion-row>
+
+        <ion-row style="margin-top:5%;">
+            <span class="fontsize_mid2">open daily 09:30 - 12:00 at the vilage</span>
+        </ion-row>
+
+        <ion-row style="margin-top:5%;">
+            <img src="assets/img/Watch.png" style="margin-top: 1%;"/>
+            <span class="fontsize_mid2" style="width:80%; margin-left: 3%; margin-top: 2%;">2 hr 30 min</span>
+        </ion-row>
+
+        <ion-row style="margin-top:5%;">
+            <ion-icon name="md-heart" class="icon_style" style="margin-top:0%; width:6%; color:#aaaaaa;"></ion-icon>
+            <span class="fontsize_mid2" style="width:80%;">{{act_by_list[i]}}</span>
+        </ion-row>
+
+        <ion-row style="margin-top:5%;">
+            <span class="fontsize_mid2">
+                {{act_description[i]}}
+            </span>
+            <ul style="margin-left: -5%;" class="fontsize_mid2">
+                <li>Silk processing</li>
+                <li>Thai music and dance</li>
+                <li>Garland making …</li>
+            </ul>  
+        </ion-row>
+
+        <ion-row style="margin-top:10px;">
+            <span class="fontsize_small" style="width:10%; color:#aaaaaa">+ 194</span>
+            <ion-icon name="md-heart" style="width:80%; text-align:left; float:left; color:#aaaaaa;"></ion-icon>
+        </ion-row>
+
+        <button ion-button class="book_button_style" (click)="goto_exp_information(i)">book now</button>
+        <ion-row style="margin-top:10%; margin-bottom:10%;">
+            <span class="fontsize_mid2" style="text-align:center;">
+                Booking required minimum 3 days in advance.
+            </span>
+        </ion-row>
+        <ion-row class="row_border"></ion-row>
+    </ion-row>
+<!--      
+    <ion-row style="margin-top:5%;">
+        <ion-col col-6>
+            <ion-row class="image_style">
+                <ion-row style="position:relative; height: 245px;">
+                    <ion-row style="position: relative;">
+                        <img src="assets/img/hei1.png" style="width:100%; position:absolute;"/>
+                        <ion-row  style="height:25px; margin-top: 15px; position:absolute;">
+                                <span style="width:20%; height:100%; float:right; margin-left: auto;">
+                                    <img src="assets/img/fix.png" class="fix_icon">
+                                </span>
+                                <span style="width:20%; height:100%; float:right;">
+                                    <img src="assets/img/undo.png" class="undo_icon">
+                                </span>
+                        </ion-row>
+                    </ion-row>
+                </ion-row>
+            </ion-row>
+        </ion-col>
+
+        <ion-col col-6>
+            <ion-row class="image_style">
+                <ion-row style="position:relative; height: 245px;">
+                    <ion-row style="position: relative;">
+                        <img src="assets/img/hei1.png" style="width:100%; position:absolute;"/>
+                        <ion-row  style="height:25px; margin-top: 15px; position:absolute;">
+                                <span style="width:20%; height:100%; float:right; margin-left: auto;">
+                                    <img src="assets/img/fix.png" class="fix_icon">
+                                </span>
+                                <span style="width:20%; height:100%; float:right;">
+                                    <img src="assets/img/undo.png" class="undo_icon">
+                                </span>
+                        </ion-row>
+                    </ion-row>
+                </ion-row>
+            </ion-row>            
+        </ion-col>
+    </ion-row>
+
+    <ion-row style="margin-top:5%;">
+        <span class="fontsize_big2" style="font-size:1.8rem;">
+            Sookjai Organic Farm Tour
+        </span>
+    </ion-row>
+
+    <ion-row style="margin-top:5%;">
+        <span class="fontsize_mid2">
+            Sampran Riverside - Ayuttaya / Thai
+        </span>
+    </ion-row>
+
+    <ion-row style="margin-top:5%;">
+        <span class="fontsize_mid2">
+            Sampran Riverside - Ayuttaya / Thai
+        </span>
+    </ion-row>
+
+    <ion-row style="margin-top:5%;">
+        <img src="assets/img/Watch.png" style="margin-top: 1%;"/>
+        <span class="fontsize_mid2" style="width:80%; margin-left: 3%; margin-top: 2%;">2 hr 30 min</span>
+    </ion-row>
+
+    <ion-row>
+        <ion-row style="margin-top:10%;">
+            <span class="fontsize_mid2">
+                Option 1 : Join tour on weekends 
+            </span>
+        </ion-row>
+        <ion-row style="margin-left:20%;">
+            <span class="fontsize_mid2">THB 700.00 / adult</span>
+            <span class="fontsize_mid2">THB 500.00 / child</span>
+        </ion-row>
+    </ion-row>
+
+    <ion-row >
+        <ion-row style="margin-top:10%;">
+            <span class="fontsize_mid2">
+                Option 2 : Join tour on weekends 
+            </span>
+        </ion-row>
+        <ion-row style="margin-left:20%;">
+            <span class="fontsize_mid2">THB 1,000.00 / adult</span>
+            <span class="fontsize_mid2">THB 700.00 / child</span>
+        </ion-row>
+    </ion-row>
+
+    <ion-row style="margin-top:10%;">
+        <span class="fontsize_mid2">
+            Across the Ta-Chine river from out resort lies a 15-acre piece of land which used to be fruit orchards and paddy fields...
+        </span>
+    </ion-row>
+
+    <ion-row style=" margin-top:15px;">
+        <span class="fontsize_small" style="width:10%; color:#aaaaaa">+ 194</span>
+        <ion-icon name="md-heart" style="width:80%; text-align:left; float:left; color:#aaaaaa;"></ion-icon>
+    </ion-row>
+
+    <button ion-button class="book_button_style" (click)="goto_exp_information()">book now</button>
+
+    <ion-row style="margin-top:10%;margin-bottom:10%;">
+        <span class="fontsize_mid2" style="text-align:center;">
+            Booking required minimum 3 days in advance.
+        </span>
+    </ion-row> -->
+</ion-content>
+
+<ion-footer style="background-color:white; width:100%; height:40px;">
+    <ion-row style="margin-top:4%;">
+        <ion-row style="width:20%; float:left; margin-left: 5%;">
+            <!-- <ion-icon name="ios-home-outline" class="bottom_icon" (click)="goto_homepage()"></ion-icon> -->
+            <img src="assets/img/home.png" class="home_icon" (click)="goto_homepage()"/>
+        </ion-row>
+        
+        <ion-row style="width:20%; float:left;">
+            <!-- <ion-icon name="ios-search-outline" class="bottom_icon" (click)="click_search_button()"></ion-icon> -->
+            <img src="assets/img/search.png" class="search_icon" (click)="click_search_button()"/>
+        </ion-row>
+        
+        <ion-row style="width:20%; float:left;">
+            <!-- <ion-icon name="ios-notifications-outline" class="bottom_icon" (click)="click_notification_button()"></ion-icon> -->
+            <img src="assets/img/noti.png" class="alert_icon" (click)="click_notification_button()"/>
+        </ion-row>
+        
+        <ion-row style="width:20%; float:left;">
+            <!-- <ion-icon name="ios-settings-outline" class="bottom_icon" (click)="click_account_button()"></ion-icon> -->
+            <img src="assets/img/setting.png" class="setting_icon" (click)="click_account_button()"/>
+        </ion-row>
+    </ion-row>
+</ion-footer>

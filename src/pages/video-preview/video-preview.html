@@ -1,0 +1,54 @@
+<!--
+  Generated template for the VideoPreviewPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <!-- <ion-navbar>
+      <ion-title> <span class="fontsize_mid1" style="margin-left: 28%;">GALLERY</span> </ion-title>
+  </ion-navbar> -->
+  <ion-row style="margin-top: 10px;background-color: white;">
+      <ion-col col-3>
+          <!-- <ion-icon name="md-menu" style="margin-left:10px; transform:scale(2, 2); margin-top: 5px;" (click)="click_menu_button();"></ion-icon> -->
+          <img src="assets/img/back.png" class="back_style" (click)="goto_back()"/>
+      </ion-col>
+      <ion-col col-9>
+          <span class="fontsize_mid1 header_style">GALLERY</span>
+      </ion-col>
+  </ion-row>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-row>
+      <video id="logo-video" width="100%" height="210" poster="{{image_src}}" class="videoset" controls >
+          <source src="{{video_src}}" type="video/mp4">
+      </video>
+  </ion-row>
+
+  <ion-row style="margin-top:10%;">
+      <span class="fontsize_big1" style="width:25%; margin-left:5%; margin-top:5%;">
+          Relate VDO
+      </span>
+      <span style="border-bottom: 1px solid #dbdbdb; width:70%;"></span>
+  </ion-row>
+
+  <ion-row style="margin-top:10%;">
+      <ion-col col-4 *ngFor="let category of recommened_item" style="width:100%;height:100%;">
+          <img class="imgclass" src="assets/{{category}}.png" class="img_style" (click)="video_click(category)"/>
+
+          <ion-row style="margin-top:5%;">
+                <span class="fontsize_small1">Amans Island Lodge Operates...</span>
+          </ion-row>
+
+          <ion-row style="margin-top:5%;" >
+            <span class="fontsize_small1" style="width:40%; color:#aaaaaa">+ 194</span>
+            <ion-icon name="md-heart" style="width:60%; text-align:left; float:left; color:#aaaaaa;"></ion-icon>
+          </ion-row>
+      </ion-col>
+  </ion-row>
+
+</ion-content>

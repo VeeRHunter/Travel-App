@@ -1,0 +1,195 @@
+<!--
+  Generated template for the ExpConfirmPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+    <!-- <ion-navbar>
+            <span class="fontsize_mid2" style="text-align: center; margin-left: 30%;">BOOKING</span>
+    </ion-navbar> -->
+    <ion-row style="margin-top: 10px;background-color: white;">
+        <ion-col col-3>
+            <!-- <ion-icon name="md-menu" style="margin-left:10px; transform:scale(2, 2); margin-top: 5px;" (click)="click_menu_button();"></ion-icon> -->
+            <img src="assets/img/back.png" class="back_style" (click)="goto_back()"/>
+        </ion-col>
+        <ion-col col-9>
+            <span class="fontsize_mid1 header_style">BOOKING</span>
+        </ion-col>
+    </ion-row>
+
+</ion-header>
+
+
+<ion-content padding>
+    <ion-row style="margin-top:5%;">
+        <ion-col col-6>
+            <ion-row style="margin-top:15%;">
+                <p class="fontsize_big2 p_style" style="font-size:1.8rem;">{{act_show.act_name}}</p>
+                <!-- <p class="fontsize_big2 p_style" style="font-size:1.8rem;">Craft Workshops</p> -->
+                <p class="fontsize_mid2 p_style" style="margin-top:0%;">{{act_show.act_by}}</p>
+                <p class="fontsize_mid2 p_style" style="margin-top:0%;">{{act_show.act_loc}}</p>
+            </ion-row>  
+        </ion-col>
+
+        <ion-col col-6 style="margin-top:25%;">
+            <img src="assets/img/gps1.png" style="margin-top:10%; float:right;" (click)="goto_map()"/>
+        </ion-col>
+
+    </ion-row>
+        
+    <ion-row>
+        <ion-row class="image_style">
+            <ion-row style="position: relative;">
+                <img src="{{act_img_src}}" style="width:100%; height:100%; position:relative;"/>
+                <ion-row  style="height:25px; margin-top: 15px; position:absolute;">
+                    <span style="width:10%; height:100%; float:right; margin-left: auto;">
+                        <img src="assets/img/fix.png" class="fix_icon">
+                    </span>
+                    <span style="width:10%; height:100%; float:right;">
+                        <img src="assets/img/undo.png" class="undo_icon">
+                    </span>
+                </ion-row>
+            </ion-row>
+        </ion-row>
+
+        <!-- <ion-col col-6>
+              <ion-row class="image_style">
+                  <ion-row style="position:relative; height: 245px;">
+                    <ion-row style="position: relative;">
+                        <img src="assets/img/hei8.png" style="width:100%; position:absolute;"/>
+                        <ion-row  style="height:25px; margin-top: 15px; position:absolute;">
+                                <span style="width:20%; height:100%; float:right; margin-left: auto;">
+                                    <img src="assets/img/fix.png" class="fix_icon">
+                                </span>
+                                <span style="width:20%; height:100%; float:right;">
+                                    <img src="assets/img/undo.png" class="undo_icon">
+                                </span>
+                        </ion-row>
+                    </ion-row>
+                  </ion-row>
+              </ion-row>            
+        </ion-col> -->
+    </ion-row>
+
+    <ion-row style="margin-top:5%;">
+        <ion-row>
+            <span class="fontsize_mid2" style="width:35%;">
+              Join Trip / Adults
+            </span>
+            <span style="border-bottom: 1px solid #dbdbdb; width:60%;"></span>
+        </ion-row>
+        <ion-row style="margin-top:5%;">
+            <ion-row>
+                <ion-col col-6>
+                  <p class="fontsize_mid2">Check In Date</p>
+                  <p class="fontsize_mid2">Half day</p>
+                </ion-col>
+
+                <ion-col col-6>
+                    <p class="fontsize_mid2" style="text-align:right;">{{act_show.act_checkin}}</p>
+                    <p class="fontsize_mid2" style="text-align:right;">9:30 - 12:00</p>
+                  </ion-col>
+            </ion-row>
+        </ion-row>
+        <ion-row class="row_border"></ion-row>
+
+        <ion-row>
+            <ion-col col-6>
+                <p class="fontsize_mid2">Price</p>
+                <p class="fontsize_mid2">Price + Vat.</p>
+                <p class="fontsize_small2">Free Cancellation</p>
+            </ion-col>
+
+            <ion-col col-6>
+                <p class="fontsize_mid1" style=" float: right; text-align: right;">THB {{act_show.act_price}}</p>
+                <p class="fontsize_mid1" style=" float: right; text-align: right;">THB {{act_price_vat}}</p>
+            </ion-col>
+        </ion-row>
+    </ion-row>
+
+<ion-row>
+    <ion-row style="margin-top:5%;">
+        <span style="font-size:1.8rem; width:50%; margin-top:5%;">
+          Contact Information
+        </span>
+        <span style="border-bottom: 1px solid #dbdbdb; width:50%;"></span>
+    </ion-row>
+    <ion-row style="width:80%; margin-left:10%;">
+      <ion-input type="text" disabled = "{{contact_mode}}" placeholder="First Name" [(ngModel)] = "contact_infor1.user_fname" class="text_border fontsize_mid1" (ionChange)="fnameChange()"></ion-input>
+    </ion-row>
+  
+    <ion-row style="width:80%; margin-left:10%;">
+        <ion-input type="text" disabled = "{{contact_mode}}" placeholder="Last Name" [(ngModel)] = "contact_infor1.user_lname" class="text_border fontsize_mid1" (ionChange)="lnameChange()"></ion-input>
+    </ion-row>
+  
+    <ion-row style="width:80%; margin-left:10%;">
+        <ion-input type="text" disabled = "{{contact_mode}}" placeholder="E-mail" [(ngModel)] = "contact_infor1.user_email" class="text_border fontsize_mid1" (ionChange)="emailChange()"></ion-input>
+    </ion-row>
+  
+    <ion-row style="width:80%; margin-left:10%;">
+        <ion-input type="number" disabled = "{{contact_mode}}" placeholder="Phone" [(ngModel)] = "contact_infor1.user_phone" class="text_border fontsize_mid1" (ionChange)="phoneChange()"></ion-input>
+    </ion-row>
+  
+    <ion-row style="width:80%; margin-left:10%;">
+        <ion-input type="text" disabled = "{{contact_mode}}" placeholder="Country" [(ngModel)] = "contact_infor1.user_country" class="text_border fontsize_mid1" (ionChange)="countryChange()"></ion-input>
+    </ion-row>
+
+    <ion-row>
+        <ion-checkbox color="secondary" style="float:left; width:8%; padding-top: 13px;" (click) = "click_checkbox()"></ion-checkbox>
+        <p class="fontsize_mid1" style="width:90%;">I'm not a participant.I made a reservation for someone else</p>
+    </ion-row>
+</ion-row>
+
+<ion-row>
+    <ion-row style="margin-top:5%;">
+        <span class="fontsize_big1" style="font-size:1.8rem; width:30%; margin-top:5%;">
+          Participants
+        </span>
+        <span style="border-bottom: 1px solid #dbdbdb; width:70%;"></span>
+    </ion-row>
+    <ion-row style="width:80%; margin-left:10%;">
+      <ion-input type="text" disabled = "{{!contact_mode}}" placeholder="First Name" [(ngModel)] = "contact_infor1.user_fname" class="text_border fontsize_big1" (ionChange)="fnameChange()"></ion-input>
+    </ion-row>
+  
+    <ion-row style="width:80%; margin-left:10%;">
+        <ion-input type="text" disabled = "{{!contact_mode}}" placeholder="Last Name" [(ngModel)] = "contact_infor1.user_lname" class="text_border fontsize_big1" (ionChange)="lnameChange()"></ion-input>
+    </ion-row>
+  
+    <ion-row style="width:80%; margin-left:10%;">
+        <ion-input type="number" disabled = "{{!contact_mode}}" placeholder="Phone" [(ngModel)] = "contact_infor1.user_phone" class="text_border fontsize_big1" (ionChange)="phoneChange()"></ion-input>
+    </ion-row>
+  
+    <ion-row style="width:80%; margin-left:10%;">
+        <ion-input type="text" disabled = "{{!contact_mode}}" placeholder="Country" [(ngModel)] = "contact_infor1.user_country" class="text_border fontsize_big1" (ionChange)="countryChange()"></ion-input>
+    </ion-row>
+
+    <button ion-button class="book_button_style" (click)="goto_payment()">confirm</button>
+</ion-row>
+
+</ion-content>
+
+<ion-footer style="background-color:white; width:100%; height:40px;">
+    <ion-row style="margin-top:4%;">
+        <ion-row style="width:20%; float:left; margin-left: 5%;">
+            <!-- <ion-icon name="ios-home-outline" class="bottom_icon" (click)="goto_homepage()"></ion-icon> -->
+            <img src="assets/img/home.png" class="home_icon" (click)="goto_homepage()"/>
+        </ion-row>
+        
+        <ion-row style="width:20%; float:left;">
+            <!-- <ion-icon name="ios-search-outline" class="bottom_icon" (click)="click_search_button()"></ion-icon> -->
+            <img src="assets/img/search.png" class="search_icon" (click)="click_search_button()"/>
+        </ion-row>
+        
+        <ion-row style="width:20%; float:left;">
+            <!-- <ion-icon name="ios-notifications-outline" class="bottom_icon" (click)="click_notification_button()"></ion-icon> -->
+            <img src="assets/img/noti.png" class="alert_icon" (click)="click_notification_button()"/>
+        </ion-row>
+        
+        <ion-row style="width:20%; float:left;">
+            <!-- <ion-icon name="ios-settings-outline" class="bottom_icon" (click)="click_account_button()"></ion-icon> -->
+            <img src="assets/img/setting.png" class="setting_icon" (click)="click_account_button()"/>
+        </ion-row>
+    </ion-row>
+</ion-footer>
